@@ -1,0 +1,24 @@
+{
+  "name": "mid.winter",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Chithra"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "angular-ui-router": "^0.2.18"
+  }
+}

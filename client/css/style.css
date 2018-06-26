@@ -1,0 +1,200 @@
+/*    Common Styles   */
+body{
+  font-weight: 200;
+}
+.bg-gradient{
+  /*Gradient bacground*/
+  background: rgba(118,126,172,1);
+  background: -moz-linear-gradient(top, rgba(118,126,172,1) 0%, rgba(62,69,143,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(118,126,172,1)), color-stop(100%, rgba(62,69,143,1)));
+  background: -webkit-linear-gradient(top, rgba(118,126,172,1) 0%, rgba(62,69,143,1) 100%);
+  background: -o-linear-gradient(top, rgba(118,126,172,1) 0%, rgba(62,69,143,1) 100%);
+  background: -ms-linear-gradient(top, rgba(118,126,172,1) 0%, rgba(62,69,143,1) 100%);
+  background: linear-gradient(to bottom, rgba(118,126,172,1) 0%, rgba(62,69,143,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#767eac', endColorstr='#3e458f', GradientType=0 );
+}
+.wrapper{
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  height: 100%;
+  top:0;
+}
+.img-bg{
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.wrapper-container{
+  overflow: hidden;
+  position: relative;
+}
+.footer{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+}
+.underline{
+  border-bottom: solid 1px;
+  font-size: 18px;
+}
+.social{
+  text-align: left;
+}
+.social img{
+  margin-right: 10px;
+  margin-left: 0px;
+}
+.cache{
+  display: none;
+}
+.cache-1{
+  background: url('../img/BG_Home.jpg');
+}
+.cache-2{
+  background: url('../img/BG_About.jpg');
+}
+.cache-3{
+  background: url('../img/BG_Contact.jpg');
+}
+.hero-title{
+  color: #30457E;
+  font-size: 35px;
+  text-align: center;
+}
+.snow-line{
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+.snow-line span{
+  display: inline-block;
+  width: 30px;
+  border-bottom: solid 1px;
+  margin: 0 10px 3px;
+}
+
+/*  Top Bar Navigation  */
+.navbar{
+  margin-bottom: 0px;
+  border-radius: 0px;
+  border: none;
+  min-height: 60px;
+}
+.navbar-nav>li>a{
+  line-height: 30px;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-text{
+  color: #fff;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+  background-color: #30457E;
+  color: #fff;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+  color: #fff;
+}
+.navbar-brand{
+  padding: 10px;
+}
+.navbar-toggle{
+  border: transparent;
+  margin-top: 13px;
+}
+.navbar-default .navbar-toggle .icon-bar{
+  background-color: #fff;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+  background-color: transparent;
+}
+.menu-panel{
+  position: absolute;
+  top: 45px;
+  right: 20px;
+  width: 150px;
+}
+.list-group-item:first-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.list-group-item:last-child {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+/*    Home Page Styles    */
+.outer-container{
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+.inner-container{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*    About Page Styles   */
+.about-content{
+    padding-top: 20px;
+}
+.card-title{
+  margin: 10px 0;
+}
+.card-image{
+  position: absolute;
+  width: 60px;
+  margin-top: -30px;
+  top: 50%;
+}
+.card-content{
+  padding-left: 70px;
+  display: inline-block;
+}
+/*  Contact Page Styles   */
+.btn{
+  padding: 5px 50px;
+  border-radius: 3px;
+}
+/*    Media Queries   */
+@media (min-width: 768px) {
+    .wrapper-container{
+      overflow: auto;
+    }
+    .social{
+      text-align: right;;
+    }
+    .social img{
+      margin-left: 10px;
+      margin-right: 0px;
+    }
+    .about-content{
+        padding-top: 80px;
+    }
+    .card-image{
+      position: static;
+      width: auto;
+    }
+    .card-content{
+      padding-left: 0px;
+      display: inline-block;
+    }
+    .card-title {
+        margin: 20px 0;
+    }
+ }
+ @media screen and (max-width: 1024px) { /* Specific to this particular image */
+  .img-bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}

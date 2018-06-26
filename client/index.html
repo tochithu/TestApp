@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="midwinter">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mid Winter</title>
+    <link rel="stylesheet" href="css/app.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-controller="appCtrl">
+      <!-- Top Navigation Bar -->
+      <nav class="navbar navbar-default bg-gradient">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" ng-click="menuPanelHandler()" class="navbar-toggle collapsed">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img alt="Mid Winter" src="img/logo.png">
+            </a>
+
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
+              <li ui-sref-active="active"><a ui-sref="about">About</a></li>
+              <li ui-sref-active="active"><a ui-sref="contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Particals aka templates -->
+      <ui-view></ui-view>
+
+      <!-- Footer -->
+      <div class="bg-gradient footer" ng-include="'templates/footer.html'"></div>
+
+      <!-- Menu Panel -->
+      <div class="menu-panel hidden-sm hidden-md hidden-lg" ng-show="showMenuPanel">
+        <ul class="list-group">
+          <li class="list-group-item" ui-sref="home" ng-click="showMenuPanel=false;"><a ui-sref="home">Home</a></li>
+          <li class="list-group-item" ui-sref="about" ng-click="showMenuPanel=false;"><a ui-sref="about">About</a></li>
+          <li class="list-group-item" ui-sref="contact" ng-click="showMenuPanel=false;"><a ui-sref="contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Cache Image to speed up loading time -->
+      <div class="cache cache-1"></div>
+      <div class="cache cache-2"></div>
+      <div class="cache cache-3"></div>
+
+      <!-- Loading Script Files -->
+      <script src="js/libs.js" charset="utf-8"></script>
+      <script src="js/app.js" charset="utf-8"></script>
+
+  </body>
+</html>
